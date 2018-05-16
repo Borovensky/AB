@@ -1,0 +1,14 @@
+{
+  "name": "ab",
+  "version": "1.0.0",
+  "description": "personal project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Borvensky Artem",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
