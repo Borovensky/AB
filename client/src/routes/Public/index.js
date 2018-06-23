@@ -18,7 +18,7 @@ export default class Public extends Component {
         return(
 
             <Fragment>
-                <h1> Test </h1>
+                <Home />
                 {/* <Route
                     exact
                     path='/'

@@ -11,9 +11,9 @@ import Routes from './routes';
 
 render(
     <Provider store={ store }>
-        <Router history={ history }>
+        {/* <Router history={ history }> */}
             <Routes/>
-        </Router>
+        {/* </Router> */}
     </Provider>, 
     document.getElementById('root')
 );
