@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:200,400,500,700')
+
+*
+    margin: 0
+    padding: 0
+
+// colors
+$mainBackground: rgba(228, 229, 231, 1)
+$mainTextColor: rgba(27, 30, 35, 1)
+
+$white100: rgba(255, 255, 255, 1)
+
+$black100: rgba(0, 0, 0, 1)
+$black90: rgba(0, 0, 0, .9)
+$black80: rgba(0, 0, 0, .8)
+$black50: rgba(0, 0, 0, .5)
+
+%userSelect
+    -webkit-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+
+h1, h2, h3, h4, p, input, textarea, label, button
+    font-family: Montserrat, sans-serif
+    @extend %userSelect
+
+h1
+    font-size: 10vw
+    letter-spacing: 10px
+
+h2
+    font-size: 2vw
+    letter-spacing: 2px
+
+body
+    width: 100%
+    height: 100%
+    background: $mainBackground
+
+// Page Container
+.pageContainer
+    position: relative
+    top: 0
+    left: 0
+    width: 100%
+
+.animated-page-wrapper
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    
+.contentContainer
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    .innerContentContainer
+        width: 100%
+        max-width: 1200px

@@ -1,0 +1,113 @@
+@import '../../main.sass'
+    
+.quoteContainer
+    width: 90%
+    height: 100%
+.homeContent
+    position: relative
+    display: flex
+    flex-direction: row
+    justify-content: center
+    align-items: center
+    h1
+        text-transform: uppercase
+        letter-spacing: 6px
+        font-weight: 300
+        font-size: 2vw
+
+.mainQuote
+    position: relative
+    top: 0px
+    left: -25px
+    text-transform: uppercase
+    font-size: 17vw
+    font-family: Montserrat, sans-serif
+    font-weight: 700
+    letter-spacing: 20px
+    line-height: 15vw
+    color: $mainTextColor
+    cursor: default
+    -webkit-user-select: none
+    user-select: none
+    margin: 20px 0
+
+.glitch
+    position: relative
+    &:before,
+    &:after
+        content: attr(data-text)
+        position: absolute
+        top: 26px
+        left: 0px
+        width: 100%
+        height: 100%
+    &:before
+        z-index: 1
+        left: 2px
+        background: $mainBackground
+        clip: rect(80px, 171px, 80px, 14px)
+        animation: glitchRed .6s 2 linear
+        animation-delay: 2s
+    &:after
+        z-index: 1
+        left: -2px
+        background: $mainBackground
+        clip: rect(95px, 171px, 95px, 14px)
+        animation: glitchBlue .6s 1 linear
+        animation-delay: 3s
+@keyframes glitchRed
+    0%
+        clip: rect(70px, 171px, 80px, 14px)
+    10%
+        clip: rect(90px, 171px, 100px, 14px)
+    20%
+        clip: rect(75px, 171px, 80px, 14px)
+    30%
+        left: 0
+    40%
+        left: 0
+    50%
+        clip: rect(75px, 171px, 90px, 14px)
+    60%
+        left: 0
+    70%
+        clip: rect(120px, 171px, 130px, 14px)
+    80% 
+        clip: rect(100px, 171px, 120px, 14px)
+    90%
+        left: 0
+    100%
+        clip: rect(180px, 171px, 200px, 14px)
+
+@keyframes glitchBlue
+    10%
+        background: $mainBackground
+        clip: rect(80px, 171px, 85px, 14px)
+    20%
+        background: $mainBackground
+        left: 0
+    30%
+        background: $mainBackground
+        clip: rect(100px, 171px, 115px, 14px)
+    40%
+        background: $mainBackground
+        clip: rect(80px, 171px, 85px, 14px)
+    50%
+        background: $mainBackground
+        left: 0
+    60%
+        background: $mainBackground
+        clip: rect(75px, 171px, 85px, 14px)
+    70%
+        background: $mainBackground
+        left: 0
+    80% 
+        background: $mainBackground
+        left: -2px
+        text-shadow: -2px 0 #ff0000
+        clip: rect(190px, 171px, 220px, 14px)
+    90%
+        left: 0
+    100%
+        background: $mainBackground
+        clip: rect(80px, 171px, 85px, 14px)
