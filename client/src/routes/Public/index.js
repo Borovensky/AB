@@ -18,8 +18,7 @@ export default class Public extends Component {
         return(
 
             <Fragment>
-                <Home />
-                {/* <Route
+                <Route
                     exact
                     path='/'
                     children={({ match, ...rest }) => (
@@ -36,7 +35,7 @@ export default class Public extends Component {
                           {match && <About {...rest} />}
                         </TransitionGroup>
                     )} 
-                /> */}
+                />
             </Fragment>
 
         );
