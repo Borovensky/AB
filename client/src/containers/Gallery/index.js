@@ -1,18 +1,18 @@
 // @flow
 
-import React, { Component, Fragment } from 'react';
+import React, { Component, Fragment} from 'react';
 
 import AnimatedWrapper from '../../routes/AnimatedWrapper';
 import Header from '../../components/Header';
 
 type Props = {}
-class AboutComponent extends Component<Props> {
+class GalleryComponent extends Component<Props> {
 
     render() {
         
         return (
             <Fragment>
-                <Header header={'About'} />
+                <Header header={'Gallery'} />
                 <div className='pageContainer'>
                    
                 </div>
@@ -23,5 +23,5 @@ class AboutComponent extends Component<Props> {
 
 };
 
-const About = AnimatedWrapper(AboutComponent);
-export default About;
+const Gallery = AnimatedWrapper(GalleryComponent);
+export default Gallery;

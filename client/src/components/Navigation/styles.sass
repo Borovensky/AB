@@ -1,0 +1,56 @@
+
+.navBarContainer
+    position: fixed
+    width: 100px
+    height: 100%
+    top: 0
+    right: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    z-index: 5
+    &:hover
+        .navBarElements
+            transform: translateX(0%)
+
+        @for $i from 1 through 5
+            .navElement#{$i}
+                width: 100%
+                transform: translateX(0%)
+
+.navBarElements
+    position: relative
+    transform: translateX(130%)
+    left: -80px
+    transition: all .3s ease-in-out
+
+@for $i from 1 through 5
+    .navElement#{$i}
+        list-style-type: none
+        padding: 0px 20px
+        margin: 20px 0 20px 0
+        transform: translateX(130%)
+        transition: all .3s ease-in-out
+        transition-delay: #{$i / 20}s
+        a
+            text-decoration: none
+            font-size: 2vw
+            font-weight: 500
+            color: #000
+            font-family: Montserrat, sans-serif
+            cursor: pointer
+            text-transform: uppercase
+            @extend %userSelect
+
+a
+    &:hover
+        color: #000
+        -webkit-animation: neon2 1.5s ease-in-out infinite alternate
+        -moz-animation: neon2 1.5s ease-in-out infinite alternate
+        animation: neon2 1.5s ease-in-out infinite alternate
+
+@keyframes neon2
+    from
+        text-shadow: 0 0 3px #000, 
+    to
+        text-shadow: 0 0 6px #000,

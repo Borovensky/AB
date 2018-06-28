@@ -1,9 +1,14 @@
+// @flow
+
 import React, { Component, Fragment } from 'react';
 import axios from 'axios';
 
 import Quote from '../../components/Quote'
 
-class Home extends Component {
+import AnimatedWrapper from '../../routes/AnimatedWrapper';
+
+type Props = {}
+class HomeComponent extends Component<Props> {
 
     componentDidMount() {
         axios.get('/api/test').then((result) => {
@@ -23,4 +28,5 @@ class Home extends Component {
     
 };
 
+const Home = AnimatedWrapper(HomeComponent);
 export default Home;    

@@ -1,8 +1,9 @@
+// @flow
+
 import React, { PureComponent } from 'react';
 
-import './styles.sass'
-
-export default class Quote extends PureComponent {
+type Props = {}
+export default class Quote extends PureComponent<Props> {
 
     render() {
 

@@ -6,22 +6,22 @@ import AnimatedWrapper from '../../routes/AnimatedWrapper';
 import Header from '../../components/Header';
 
 type Props = {}
-class AboutComponent extends Component<Props> {
+class ContactsComponent extends Component<Props> {
 
     render() {
         
         return (
             <Fragment>
-                <Header header={'About'} />
+                <Header header={'Contacts'} />
                 <div className='pageContainer'>
                    
                 </div>
             </Fragment>
         );
-
+        
     };
 
 };
 
-const About = AnimatedWrapper(AboutComponent);
-export default About;
+const Contacts = AnimatedWrapper(ContactsComponent);
+export default Contacts;
