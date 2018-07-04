@@ -8,7 +8,8 @@ import { connect } from 'react-redux';
 // import feedbackActions from '../actions/feedback';
 
 type Props = {
-    handleSubmit: Function
+    handleSubmit: Function,
+    sendFeedback: Function
 }
 
 class FeedbackForm extends Component<Props> {
@@ -52,14 +53,14 @@ class FeedbackForm extends Component<Props> {
             );
         }
 
-    }
+    };
 
     onSubmit(values) {
         
-        // console.log(values);
-        // this.props.sendFeedback(values);
+        console.log(this.props);
+        this.props.sendFeedback(values);
 
-    }
+    };
 
     renderButton() {
         
@@ -67,9 +68,9 @@ class FeedbackForm extends Component<Props> {
             <button type='submit' className='submitButton'>
                 <span className='buttonText'>send enquiry</span>
             </button>
-        )
+        );
 
-    }
+    };
 
     render() {
 
@@ -93,9 +94,9 @@ class FeedbackForm extends Component<Props> {
             </div>
         );
 
-    }
+    };
 
-}
+};
 
 function validate (values){
 
@@ -111,11 +112,11 @@ function validate (values){
         errors.message = 'Required';
     } else if(values.message.length < 4) {
         errors.message = 'Minimum 4 character'
-    }
+    };
     
     return errors;
 
-}
+};
 
 const mapStateToProps = (state) => ({
     // sendingFeedback: state.ui.sendingFeedback

@@ -2,15 +2,18 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import { routerMiddleware } from 'react-router-redux';
 import { createBrowserHistory } from 'history';
 import { createLogger } from 'redux-logger';
+import createSagaMiddleware from 'redux-saga';
 
 import reducers from '../reducers';
+import { saga } from '../sagas';
 
 const dev = process.env.NODE_ENV === 'development'; // eslint-disable-line
 const devtools = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__;
 const composeEnhancers = dev && devtools ? devtools : compose;
 
+const sagaMiddleware = createSagaMiddleware();
 const history = createBrowserHistory();
-const middleware = [routerMiddleware(history)]
+const middleware = [sagaMiddleware, routerMiddleware(history)];
 
 const logger = createLogger({
     duration:  true,
@@ -27,7 +30,9 @@ const logger = createLogger({
 
 if(dev) {
     middleware.push(logger);
-}
+};
 
 export { history };
 export default createStore(reducers, composeEnhancers(applyMiddleware(...middleware)));
+
+sagaMiddleware.run(saga);
