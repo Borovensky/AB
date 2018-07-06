@@ -5,7 +5,7 @@ import { Field, reduxForm, values } from 'redux-form';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-// import feedbackActions from '../actions/feedback';
+import Button from '../../Button';
 
 type Props = {
     handleSubmit: Function,
@@ -57,7 +57,6 @@ class FeedbackForm extends Component<Props> {
 
     onSubmit(values) {
         
-        console.log(this.props);
         this.props.sendFeedback(values);
 
     };
@@ -65,9 +64,12 @@ class FeedbackForm extends Component<Props> {
     renderButton() {
         
         return(
-            <button type='submit' className='submitButton'>
-                <span className='buttonText'>send enquiry</span>
-            </button>
+            <Button
+                type = {'submit'}
+                buttonStyleClass = {'submitButton'}
+            >
+                send enquiry
+            </ Button>
         );
 
     };

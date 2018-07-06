@@ -2,6 +2,9 @@
 
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { Icon } from 'react-icons-kit'
+import {arrows_left} from 'react-icons-kit/linea/arrows_left'
+
 
 type Props = {}
 class Navigation extends Component<Props> {
@@ -10,6 +13,13 @@ class Navigation extends Component<Props> {
 
         return (
             <div className='navBarContainer'>
+                <div className='linesContainer'>
+                    <div className='lineTop'></div>
+                    <div className='iconContainer'>
+                        <Icon icon={arrows_left} className='iconStyle' size={40}/>
+                    </div>
+                    <div className='lineBottom'></div>
+                </div>
                 <ul className='navBarElements'>
                     <li className='navElement1'>
                         <Link to='/'>Home</Link>
